@@ -1,0 +1,41 @@
+.after_login
+{
+	display: none;
+}
+#login_enter
+{
+	width: 100%;
+}
+#room_create_menu
+{
+	display: none;
+}
+.ingame
+{
+	display: none;
+}
+.stadium
+{
+	border: 1px solid black;
+}
+.admin
+{
+	color: red;
+}
+#team_table
+{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+#team_table td, #team_table th
+{
+	border: 1px solid black;
+}
+#player_management_menu
+{
+	display: none;
+}
+.hidden
+{
+	display: none;
+}

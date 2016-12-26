@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Hacksball</title>
+		<script src="js/debug.js"></script>
+		<script src="js/adapter.js"></script>
+		<script src="js/session.js"></script>
+		<script src="js/event-dispatcher.js"></script>
+		<script src="js/network-dispatcher.js"></script>
+		<script src="js/network-host.js"></script>
+		<script src="js/network-peer.js"></script>
+		<script src="js/binary.js"></script>
+		<script src="js/player.js"></script>
+		<script src="js/game-state.js"></script>
+		<script src="js/game-action.js"></script>
+		<script src="js/gui-game-handler.js"></script>
+		<script src="js/game-client.js"></script>
+		<script src="js/stadium.js"></script>
+		<script src="js/master-server.js"></script>
+		<script src="js/ui.js"></script>
+		<script src="js/location.js"></script>
+		<script src="/geo/"></script>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<div class="after_login">
+			<div class="ingame">
+				<div id="player_management_menu">
+					<input type="button" id="player_kick" value="Kick" />
+					<input type="checkbox" id="player_ban" />
+					<input type="button" id="player_admin" value="Admin" />
+				</div>
+				<table>
+					<tr>
+						<td>
+							<div id="player_menu">
+								<table id="team_table">
+									<thead>
+										<tr>
+											<th id="team_table_head_red">Red</th>
+											<th id="team_table_head_spec">Spec</th>
+											<th id="team_table_head_blue">Blue</th>
+										</tr>
+									</thead>
+									<tbody id="team_table_body">
+									</tbody>
+								</table>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div id="game_controls">
+								<div class="hidden"><input type="file" id="game_map_file" /></div>
+								<input type="button" id="game_select_map" value="Load map..." />
+								<input type="button" id="game_start_button" value="Start game">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div id="chat_content"></div>
+							<div>
+								<form id="chat_form">
+									<input type="text" placeholder="Chat message" id="chat_message" />
+								</form>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="lobby">
+				<div id="room_create_menu">
+					<form id="room_create_form">
+						<table>
+							<tr>
+								<td>
+									<label for="room_name">Room name:</label>
+								</td>
+								<td>
+									<input type="text" id="room_name" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="room_players">Player count:</label>
+								</td>
+								<td>
+									<input type="number" id="room_players" value="10" min="0" max="255" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="room_password">Password:</label>
+								</td>
+								<td>
+									<input type="password" id="room_password" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="room_public">Public room:</label>
+								</td>
+								<td>
+									<input type="checkbox" id="room_public" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+								<td>
+									<input type="submit" id="room_create" value="Host room" />
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+				<div id="lobby_options">
+					<input type="button" value="Refresh" id="button_refresh_list" /><input type="button" value="Create room" id ="button_room_create_menu" />
+				</div>
+				<table id="room_list">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Players</th>
+							<th>Pass</th>
+							<th>Location</th>
+						</tr>
+					</thead>
+					<tbody id="room_list_body">
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div id="login" class="before_login">
+			<form id="login_form">
+				<table>
+					<tr>
+						<td>Nickname:</td>
+						<td>
+							<input type="text" id="login_nickname" placeholder="Nickname" />
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<input type="submit" id="login_enter" value="Login" />
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</body>
+</html>
