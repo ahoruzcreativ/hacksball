@@ -1,0 +1,14 @@
+{
+	"name": "hacksball-server",
+	"description": "Signalling server for WebRTC communication based on a WebSocket server",
+	"author": "Otto <otto@shamequit.com>",
+	"dependencies":
+	{
+		"ws": "*",
+		"randomstring": "*"
+	},
+	"scripts":
+	{
+		"start": "nodejs server.js"
+	}
+}
